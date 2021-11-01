@@ -7,9 +7,9 @@ REST API to simulate the CRUD operations for a banking customer.
 *	Create a bank customer.
 *	Retrieve a customer details.  
 *	Update a customer's mobile number.
-*   Retrieve all customers below 18 years of age.
-*   Retrieve a customer's address.
-*   Delete a customer. 
+* Retrieve all customers below 18 years of age.
+* Retrieve a customer's address.
+* Delete a customer. 
 
 
 ## Getting Started
@@ -46,7 +46,6 @@ springfox-swagger2
 springfox-swagger-ui
 spring-boot-starter-test
 spring-security-test
-
 ```
 
 ## Swagger
