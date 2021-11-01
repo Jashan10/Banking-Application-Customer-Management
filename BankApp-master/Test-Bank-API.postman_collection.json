@@ -1,0 +1,126 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Test-Bank-API",
+		"_postman_id": "80a2cc8e-7e4d-71d0-ce11-8ae21a7c3777",
+		"description": "The following UC will be tested in this Test-Bank-API collection.\n\nUS1:\nAs a bank\nI should be able to create a customer\nSo that I can provide services to the customer\n\nUS2:\nAs a customer\nI should be able to retrieve my details\nSo that I can verify that the data is correct\n\nUS3\nAs a customer\nI should be able update my mobile no\nSo that I can change my mobile no as required\n\nUS4\nAs a bank\nI should be retrieve all customers with age < 18\nSo that I can send them relavent communication\n\nUS5\nAs a bank\nI should be retrieve a customers addresses\nSo that I can send them relavent communication\n\nUS6\nAs a customer\nI should be able to request the bank to remove my details\nSo that I can be sure that my privacy is protected\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8989/bank-api/customers",
+			"request": {
+				"url": "http://localhost:8989/bank-api/customers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactDetails\": {\r\n    \"emailId\": \"roger@test.com\",\r\n    \"mobilePhone\":\"123456789\",\r\n    \"homePhone\": \"8470000000\",\r\n    \"workPhone\": \"8471112222\"\r\n    \r\n  },\r\n  \"customerAddress\": {\r\n        \"address1\": \"123 McKee Ave\",\r\n        \"address2\": \"UNIT 4\",\r\n        \"city\": \"Chicago\",\r\n        \"country\": \"USA\",\r\n        \"state\": \"IL\",\r\n        \"zip\": \"60076\"\r\n  },\r\n  \"customerNumber\": 1001,\r\n  \"firstName\": \"Roger\",\r\n  \"lastName\": \"Federer\",\r\n  \"middleName\": \"D\",\r\n  \"dateOfBirth\": \"2011-10-10\",\r\n  \"status\": \"Active\"\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/bank-api/customers/1001",
+			"request": {
+				"url": "http://localhost:8989/bank-api/customers/1001",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/bank-api/customers/1001",
+			"request": {
+				"url": "http://localhost:8989/bank-api/customers/1001",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactDetails\": {\r\n    \"mobilePhone\": \"123456781\"\r\n  }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/bank-api/customers/age",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8989/bank-api/customers/age?lt=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"bank-api",
+						"customers",
+						"age"
+					],
+					"query": [
+						{
+							"key": "lt",
+							"value": "18",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/bank-api/customers/1001/address",
+			"request": {
+				"url": "http://localhost:8989/bank-api/customers/1001/address",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/bank-api/customers/1001",
+			"request": {
+				"url": "http://localhost:8989/bank-api/customers/1001",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
