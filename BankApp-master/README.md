@@ -68,7 +68,7 @@ http://localhost:8989/bank-api/h2-console/
 1. Import the Postman collection Test-Bank-API.postman_collection into the application.
 2. Sample requests to add customers are also present in <project-root>/src/main/resources .
 ```
-## Link to download Postman Collection file
+## Link to Postman Collection file
 https://github.com/Jashan10/Banking-Application-Customer-Management/blob/main/BankApp-master/Test-Bank-API.postman_collection.json
 
 ## URL and Sample Requests for different UC.
