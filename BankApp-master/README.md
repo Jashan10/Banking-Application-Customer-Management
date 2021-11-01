@@ -65,7 +65,7 @@ http://localhost:8989/bank-api/h2-console/
 
 ## Testing the Bank APP Rest Api
 ```
-1. Import the Postman collection Test-Bank-API.postman_collection into the application.
+1. Import the Postman collection Test-Bank-API.postman_collection in Postman.
 2. Sample requests to add customers are also present in <project-root>/src/main/resources .
 ```
 ## Link to Postman Collection file
