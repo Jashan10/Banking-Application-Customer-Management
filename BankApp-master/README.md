@@ -16,7 +16,7 @@ REST API to simulate the CRUD operations for a banking customer.
 
 1. Checkout the project from GitHub
 ```
-git clone https://github.com/
+git clone https://github.com/Jashan10/Banking-Application-Customer-Management/tree/main/BankApp-master
 ```
 2. Enable Lombok support on your IDE
 3. Open IDE of your choice and Import as existing maven project in your workspace
